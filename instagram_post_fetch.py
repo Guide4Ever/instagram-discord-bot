@@ -19,7 +19,7 @@ L = instaloader.Instaloader()
 L.login(LOGIN_USERNAME, LOGIN_PASSWORD)
 
 # Define a dictionary to store last post timestamps for each username, defaulting to today's midnight for first run
-last_post_timestamps = {username: datetime.datetime(2023, 12, 30) for username in usernames} 
+last_post_timestamps = {username: get_today_time_midnight() for username in usernames} 
 
 async def main():
 
