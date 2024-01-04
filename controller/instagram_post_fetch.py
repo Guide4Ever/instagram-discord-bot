@@ -1,9 +1,8 @@
 import asyncio
 import instaloader
 from dotenv import dotenv_values
-import time, datetime
-from utility import get_today_time_midnight
-from discord_post import publish_post_to_discord
+from utility.helpers import get_today_time_midnight
+from controller.discord_post import publish_post_to_discord
 
 config = dotenv_values('.env')
 values_str = config.get('INSTAGRAM_ACCOUNTS', '')
